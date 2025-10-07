@@ -32,6 +32,8 @@ python main.py
 - On startup, the app requests all quotes from the ZenQuotes API and stores them in memory.
 - Clicking the avatar button selects a random quote and author and updates the canvas text.
 - Images are loaded from the `assets/` directory.
+
+
 ![App preview](assets/program.png)
 
 Key parts (see `main.py`):
