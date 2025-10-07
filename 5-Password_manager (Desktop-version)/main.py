@@ -85,6 +85,7 @@ window.config(padx=50, pady=20,bg="black")
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 #Canvas to display the logo
+#Due to Cross-paltforms capapilities we need to check the OS type, so we can use the right icon format
 canvas = Canvas(height=200, width=200,borderwidth=10,bg='black') 
 if os.name == 'nt':
     # On Windows, use .ico with iconbitmap
@@ -101,6 +102,7 @@ else:
         window._icon_ref = icon_image  # keep a reference to avoid GC
     except Exception:
         pass
+
 #Display The Logo in The Canvas 
 file_name = os.path.join(base_dir,'Photos','security.png')
 logo_img = PhotoImage(file=file_name)
